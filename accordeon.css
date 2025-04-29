@@ -1,0 +1,147 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fa;
+  line-height: 1.6;
+  padding: 20px;
+}
+.accordion {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+  .accordion-h1, .accordion-h2, .accordion-h3, .accordion-h4, .accordion-h5 {
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    user-select: none;
+    margin: 0;
+  }
+  
+  
+  .accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+  }
+  .accordion-item-header.active::after {
+    content: "\2212";
+  }
+  .accordion-h1 {
+    padding: 10px 20px;
+    background: #582930;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    border-bottom: 1px solid #adadad;
+    text-transform: uppercase;
+  }
+  .accordion-h1:hover {
+    background: #73484F;
+  }
+  .accordion-h2 {
+    padding: 15px 25px;
+    background: #f5f2f2;
+    color: #582930;
+    font-size: 17px !important;;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid #707070;
+  }
+  .accordion-h2:hover {
+    background: #b1b4b2;
+  }
+  .accordion-h3 {
+    padding: 12px 35px;
+    background: #f5f2f2;
+    color: #582930;
+    font-size: 16px !important;;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid #b1b4b2;
+  }
+  .accordion-h3:hover {
+      background: #b1b4b2;
+  }
+  .accordion-h4 {
+    padding: 10px 45px;
+    background: #f5f2f2;
+    color: #582930;
+    font-size: 15px !important; ;
+    font-weight: 500;
+    border-bottom: 1px solid #b1b4b2;
+  }
+  .accordion-h4:hover {
+    background: #b1b4b2;
+  }
+  .accordion-h5 {
+    padding: 8px 55px;
+    background: #f5f2f2;
+    color: #582930;
+    font-size: 0.9rem !important;;
+    font-weight: 500;
+    border-bottom: 1px solid #b1b4b2;
+  }
+  
+  .accordion div, .accordion-p {
+    display: none;
+    background: #f9f9f9;
+  }
+  .accordion-p {
+    padding: 15px 60px;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+  }
+  .accordion .opened-for-codepen {
+    display: block;
+  }
+  .accordion-list  {
+      padding: 15px 75px;   
+        list-style: unset !important;
+  }
+  .accordion-span {
+      padding: 15px 60px;   
+  }
+  .accordion-h1::after, .accordion-h2::after, .accordion-h3::after, .accordion-h4::after, .accordion-h5::after {
+  content: "\002B"; /* + */
+  font-size: 1.5rem;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  }
+  
+  .accordion-h1.active::after, .accordion-h2.active::after, .accordion-h3.active::after, .accordion-h4.active::after, .accordion-h5.active::after {
+  content: "\2212"; /* - */
+  }
+  .accordion-h1, .accordion-h2, .accordion-h3, .accordion-h4, .accordion-h5 {
+  position: relative; /* Нужно для позиционирования иконки */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .accordion-h1 {
+      font-size: 15px !important;;
+      padding: 10px 20px;
+    }
+    .accordion-h2, .accordion-h3, .accordion-h4, .accordion-h5 {
+      font-size: 14px !important;
+    }
+    .accordion-p {
+      padding: 20px 10px 20px 40px;
+      font-size: 14px !important;
+    }
+    .accordion-list {
+      padding: 10px 10px 0 40px;
+      font-size: 14px !important;
+  }
+    }
+      
+  
